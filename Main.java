@@ -23,17 +23,35 @@ class Main {
     System.out.println("Your weight is " + weight);
 
     System.out.println(welcome(name));
+
+
+
+   System.out.println("What is your blood current blood pressure? ");
+
+    int currentBloodPressure = scan.nextInt();
+
+    System.out.println("What was your blood pressure last year? ");
+    int lastBloodPressure = scan.nextInt();
+
+    int blood = bloodPressure(lastBloodPressure, currentBloodPressure);
+
+    System.out.println(" Your blood pressure is " + blood);
+
     }
 
-    //method calculates Weight 
+    //method calculates the paients current Weight 
     static int getWeight(int weightLostGained , int currentWeight)
    {
     int weight = currentWeight + weightLostGained ;
     return weight;
    }  
 
- 
- 
+    //mathod that find how much the paients blood pressue has gone up or down 
+   static int bloodPressure(int currentBloodPressure , int lastBloodPressure )
+   {
+    int blood = lastBloodPressure - currentBloodPressure ;
+    return blood;
+   }  
    
 
 
